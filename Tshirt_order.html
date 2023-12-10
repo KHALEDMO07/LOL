@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Tshirt_order.css">
+</head>
+<body>
+<div class="container">
+  <div class="form-group" id="Tinfo">
+    <label for="PhoneNum">Your Phone Number :</label>
+    <input type="text" id="PhoneNum" name="Phone" required>
+    <label for="userName">Your Name :</label>
+    <input type="text" id="userName" name="UserName" required>
+    <label for="address">Your Address : </label>
+    <input type="text" id = "address" name = "UserAddress" required placeholder="Minya | Matay | Bardanoha">
+    <label for="TStype">What is the Type of The T-Shirt :</label>
+    <input type="text" id = "TStype" name = "T-ShirtType" placeholder="write type like puma , adidas ,etc..">
+    <label for="sz">What the size of your T-shirt :</label>
+    <input type="text" id = "sz" name = "TS_size" placeholder="XLarge">
+    <button type="submit" onclick="sub()">Submit</button>
+    <br><br>
+    <button onclick ="CanC()">Cancel</button>
+  </div> 
+  </div>
+  <script>
+    function CanC(){
+      window.close();
+    }
+    function sub(){
+       let s = document.getElementById("PhoneNum").value;
+       if(s.length != 11 || (s[0] != '0' || s[1] != '1'))
+        alert("invalid Phone Number")
+       for(let i = 0 ; i < s.length ; i++){
+         if(s[i] < '0' || s[i] > '9'){
+          alert("invalid Phone Number");
+          break;
+         }
+        }
+         let arr = ["small", "midium" , "large" , "xlarge" , "xxlarge" , "xxxlarge"]
+         let ss = document.getElementById("sz").value; 
+         ss.toLowerCase();
+         let f = 0;
+         for(let i = 0 ; i < arr.length ; i++){
+             if(arr[i] == ss){
+              f = 1;
+              break;
+             }
+         }
+         if(!f)alert("invalid T-shirt Size");
+      }
+  </script>
+  </body>
+
+  </html>

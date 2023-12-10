@@ -1,0 +1,35 @@
+.sDes{
+    text-align: center;
+    font-size: large;
+    font-style: italic;
+    position: relative;
+    top:50px
+}
+
+body{
+    background-color:rgb(100, 138, 24);
+}
+
+.us {
+    padding: 20px;
+    position: relative;
+    top:300px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.homePage a{
+    column-count: 1;
+    column-fill: balance;
+    font-weight: bolder;
+    padding: 16px 110px;
+    margin : 16px 150px;
+    font-size: large;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+}
+.homePage a:hover {
+    background-color: #ddd; 
+    color: black;
+}
